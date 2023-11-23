@@ -7,6 +7,9 @@ import os
 app = Flask(__name__)
 CORS(app)
 
+CORS(app, resources={r"/*": {"origins": "https://endritqerkinaj1.bubbleapps.io"}})
+
+
 def query(payload, model_id, api_token):
     headers = {"Authorization": f"Bearer {api_token}"}
     api_url = f"https://api-inference.huggingface.co/models/{model_id}"
