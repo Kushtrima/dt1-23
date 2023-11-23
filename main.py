@@ -1,11 +1,9 @@
 from flask import Flask, request as req, jsonify
-from flask_cors import CORS
 import requests
 import logging
 import os
 
 app = Flask(__name__)
-CORS(app)
 
 
 def query(payload, model_id, api_token):
